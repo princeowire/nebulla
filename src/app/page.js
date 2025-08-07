@@ -5,6 +5,7 @@ import Sidebar from "@/components/UI/Sidebar";
 import customer from "@/assets/customer.svg"; 
 import { ArrowUp } from "lucide-react";
 import { useState } from "react";
+import Chart from "@/components/UI/chart";
 
 export default function Home() {
 
@@ -42,7 +43,9 @@ export default function Home() {
         </div>
         ))}
 
-
+        <div>
+          <Chart />
+        </div>
         
       </div>
 
