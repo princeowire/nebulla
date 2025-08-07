@@ -37,7 +37,7 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
   return (
     <div className="flex h-screen absolute top-0 left-0">
       {/* Fixed Vertical Icon Bar */}
-      <div className="w-16 bg-[#0e0f11] flex flex-col items-center justify-between py-4 border-r border-gray-700">
+      <div className="w-16 bg-[#0e0f11] flex flex-col items-center justify-between py-4 border-r border-gray-800">
         {/* Logo */}
         <div className="bg-blue-500 text-white font-bold text-sm w-10 h-10 rounded-lg flex items-center justify-center">
           L
@@ -57,12 +57,12 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
 
       {/* Expandable Sidebar */}
       <div
-        className={`bg-[#0e0f11] border-r border-gray-700 transition-all duration-300 flex flex-col ${
+        className={`bg-[#0e0f11] border-r border-gray-800 transition-all duration-300 flex flex-col ${
           collapsed ? "w-0" : "w-64"
         } overflow-hidden`}
       >
         {/* Header */}
-        <div className="p-4 flex items-center justify-between border-b border-gray-700">
+        <div className="p-4 flex items-center justify-between border-b border-gray-800">
           <div className="flex items-center space-x-2">
             <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
               <span className="text-white font-bold text-sm">D</span>
@@ -71,7 +71,7 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
           </div>
           <button
             onClick={toggleCollapsed}
-            className="p-1.5 rounded-lg hover:bg-gray-700 transition-colors"
+            className="p-1.5 rounded-lg hover:bg-gray-800 transition-colors"
           >
             <ChevronLeft className="h-4 w-4 text-gray-400" />
           </button>
@@ -107,7 +107,7 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
         </div>
 
         {/* User Profile */}
-        <div className="p-4 border-t border-gray-700">
+        <div className="p-4 border-t border-gray-800">
           <div className="flex items-center space-x-3">
             <div className="flex-1 min-w-0 space-y-4">
               <p className="text-xs text-gray-400 truncate">Widget Ui</p>

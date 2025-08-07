@@ -2,10 +2,10 @@
 import Image from "next/image";
 import Header from "@/components/UI/Header";
 import Sidebar from "@/components/UI/Sidebar";
+import BarChartMultiple from "@/components/UI/Barchart";
 import customer from "@/assets/customer.svg"; 
 import { ArrowUp } from "lucide-react";
 import { useState } from "react";
-import Chart from "@/components/UI/chart";
 
 export default function Home() {
 
@@ -23,13 +23,13 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-[#0e0f11] text-white ">
+    <div className="bg-[#0e0f11] ml-16 text-white ">
       <Header onToggleSidebar={toggleSidebar} />
       <Sidebar collapsed={!isSidebarOpen} toggleCollapsed={toggleSidebar} />
 
-      <div className="flex gap-8 p-4 ml-[05.8%] text-white">
+      <div className="flex gap-8 p-4  text-white">
         {data.map((item) => (
-        <div key={item.id} className="flex justify-between w-full gap-4 p-4 border border-gray-600 rounded-[20px]">
+        <div key={item.id} className="flex justify-between w-full gap-4 p-4 border border-gray-800 rounded-[20px]">
           <div className="flex flex-col justify-center gap-1">
             <p className="text-gray-300 font-semibold">{item.name}</p>
             <p className="text-2xl">{item.value}</p>
@@ -41,13 +41,26 @@ export default function Home() {
           </div>
 
         </div>
-        ))}
-
-        <div>
-          <Chart />
-        </div>
-        
+        ))}        
       </div>
+
+        <div className="flex gap-4 p-4">
+
+          <div className="w-[60%]"><BarChartMultiple /></div>
+
+          <div className="w-[35%]">
+
+            <div className="w-full">
+              <div className="h-3/5 border border-gray-800 p-4">
+                <p>Earning</p>
+                <p className="text-2xl">$16.4k</p>
+              </div>
+              <div className="h-2/5"></div>
+            </div>
+
+          </div>
+
+        </div>
 
     </div>
   );

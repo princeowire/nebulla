@@ -1,11 +1,11 @@
 "use client";
 
 import { Search, Bell, Settings, User } from 'lucide-react';
-import Hamburger from './hambuger';
+import Hamburger from './Hambuger';
 
 export default function Header() {
   return (
-    <header className="backdrop-blur-3xl border-b border-gray-700 px-6 py-4 z-50 ml-[05.8%] flex items-center justify-between">
+    <header className="backdrop-blur-3xl border-b border-gray-800 px-6 py-4 z-50 flex items-center justify-between">
       <div className="flex items-center justify-between w-full">
         <div className="flex items-center space-x-4 onClick={onToggleSidebar}">
           <Hamburger  />
@@ -18,7 +18,7 @@ export default function Header() {
             <input
               type="text"
               placeholder="Search here..."
-              className="border border-gray-600 rounded-[30px] pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
+              className="border border-gray-800 rounded-[30px] pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
             />
             <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-600 px-1.5 py-0.5 rounded">
               /
