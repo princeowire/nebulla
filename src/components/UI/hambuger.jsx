@@ -3,7 +3,9 @@
 import React, { useState } from 'react';
 
 const AnimatedMenuButton = ({ collapsed, toggleCollapsed }) => {
-  const [isOpen, setIsOpen] = useState(true);
+  const [isOpen, setIsOpen] = useState(false);
+
+  const toggleCheck = isOpen ? collapsed = true : false;
 
   const toggleMenu = () => {
     setIsOpen(!isOpen);

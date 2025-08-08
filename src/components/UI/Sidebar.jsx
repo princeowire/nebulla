@@ -7,7 +7,8 @@ import {
   Settings,
   Bell,
   HelpCircle,
-  Search
+  Search,
+  User,
 } from "lucide-react";
 
 export default function Sidebar({ collapsed, toggleCollapsed }) {
@@ -35,23 +36,29 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
   ];
 
   return (
-    <div className="flex h-screen absolute top-0 left-0">
+    <div className="flex h-screen absolute top-0 left-0 z-50">
       {/* Fixed Vertical Icon Bar */}
-      <div className="w-16 bg-[#0e0f11] flex flex-col items-center justify-between py-4 border-r border-gray-800">
-        {/* Logo */}
-        <div className="bg-blue-500 text-white font-bold text-sm w-10 h-10 rounded-lg flex items-center justify-center">
-          L
-        </div>
+      <div className="w-16 bg-[#0e0f11] flex flex-col items-center justify-between h-full py-4 border-r border-gray-800">
+       
+        <div className="flex flex-col items-center gap-6 mt-6 text-gray-400"> 
 
-        {/* Icons */}
-        <div className="flex flex-col items-center gap-6 mt-6 text-gray-400">
-          <Search className="w-5 h-5 cursor-pointer hover:text-white" />
-          <Bell className="w-5 h-5 cursor-pointer hover:text-white" />
-          <HelpCircle className="w-5 h-5 cursor-pointer hover:text-white" />
-          <Settings className="w-5 h-5 cursor-pointer hover:text-white" />
+          <div>p</div>
+
+          <div className="flex flex-col gap-4">
+            <Search className="w-5 h-5 cursor-pointer hover:text-white" />
+            <Bell className="w-5 h-5 cursor-pointer hover:text-white" />
+            <HelpCircle className="w-5 h-5 cursor-pointer hover:text-white" />
+            <Settings className="w-5 h-5 cursor-pointer hover:text-white" />
+          </div>
         </div>
 
         {/* Spacer */}
+
+        <div>
+            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+              <User className="h-4 w-4 text-white" />
+            </div>
+        </div>
         <div />
       </div>
 
@@ -64,9 +71,6 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
         {/* Header */}
         <div className="p-4 flex items-center justify-between border-b border-gray-800">
           <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 bg-blue-500 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">D</span>
-            </div>
             <span className="font-semibold text-white">Dashboards</span>
           </div>
           <button
