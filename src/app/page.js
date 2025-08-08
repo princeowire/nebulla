@@ -80,7 +80,7 @@ export default function Home() {
                 <p>Closed Orders</p>
               </div>
 
-              <div className="max-sm:w-full border rounded-xl border-gray-800 flex flex-col justify-between">
+              <div className="max-md:w-full border rounded-xl border-gray-800 flex flex-col justify-between">
                 <div className="p-4">
                   <p>Earning</p>
                   <p className="text-2xl">$16.4k</p>
