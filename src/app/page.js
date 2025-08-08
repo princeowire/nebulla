@@ -30,63 +30,67 @@ export default function Home() {
   };
 
   return (
-    <div className="bg-[#0e0f11] ml-16 text-gray-300">
+    <div className="bg-[#0e0f11] ml-16 max-sm:ml-0 text-gray-300">
       <Header onToggleSidebar={toggleSidebar} />
       <Sidebar collapsed={!isSidebarOpen} toggleCollapsed={toggleSidebar} />
 
-      {/* Top Cards */}
-      <div className="flex flex-wrap gap-4 p-4">
-        {data.map((item) => (
-          <div key={item.id} className="flex justify-between flex-1 min-w-[250px] max-sm:w-full gap-4 p-4 border border-gray-800 rounded-[20px]">
-            <div className="flex flex-col justify-center gap-1">
-              <p className="text-gray-300 font-semibold">{item.name}</p>
-              <p className={`text-2xl my-2 font-bold ${item.textColor}`}>{item.value}</p>
-              <p className="text-sm text-[#00d492] flex items-center"><ArrowUp className="w-4 h-4" /> {item.percentage}</p>
-            </div>
-            <div className="p-2 max-w-[250px] rounded-[30%] h-[40px] w-[40px] bg-[#ffba4242]">
-              <Image src={item.img} alt="" />
-            </div>
-          </div>
-        ))}
-      </div>
+      <div className="flex flex-wrap max-sm:flex-col-reverse">
 
-      {/* Charts Section */}
-      <div className="flex flex-wrap gap-4 justify-between p-4">
-        <div className="w-full sm:w-[60%]">
-          <BarChartMultiple />
+        {/* Top Cards */}
+        <div className="flex flex-wrap gap-4 p-4">
+          {data.map((item) => (
+            <div key={item.id} className="flex justify-between flex-1 min-w-[250px] max-sm:w-full gap-4 p-4 border border-gray-800 rounded-[20px]">
+              <div className="flex flex-col justify-center gap-1">
+                <p className="text-gray-300 font-semibold">{item.name}</p>
+                <p className={`text-2xl my-2 font-bold ${item.textColor}`}>{item.value}</p>
+                <p className="text-sm text-[#00d492] flex items-center"><ArrowUp className="w-4 h-4" /> {item.percentage}</p>
+              </div>
+              <div className="p-2 max-w-[250px] rounded-[30%] h-[40px] w-[40px] bg-[#ffba4242]">
+                <Image src={item.img} alt="" />
+              </div>
+            </div>
+          ))}
         </div>
 
-        <div className="w-full sm:w-[37%] flex flex-col sm:flex-row gap-4">
-          <div className="w-full h-full flex flex-col justify-between gap-4">
-            <div className="h-[200px] sm:h-[70%] border rounded-xl border-gray-800 p-4">
-              <p>Earning</p>
-              <p className="text-2xl">$16.4k</p>
-            </div>
-            <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
-              <span>
-                <p>45%</p>
-              </span>
-              <p>Closed Orders</p>
-            </div>
+        {/* Charts Section */}
+        <div className="flex flex-wrap gap-4 justify-between p-4">
+          <div className="w-full sm:w-[60%]">
+            <BarChartMultiple />
           </div>
 
-          <div className="w-full h-full flex flex-col justify-between gap-4">
-            <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
-              <span>
-                <p>45%</p>
-              </span>
-              <p>Closed Orders</p>
-            </div>
-
-            <div className="h-[200px] sm:h-[70%] border rounded-xl border-gray-800 flex flex-col justify-between">
-              <div className="p-4">
+          <div className="w-full sm:w-[37%] flex flex-col sm:flex-row gap-4">
+            <div className="w-full h-full flex flex-col justify-between gap-4">
+              <div className="h-[200px] sm:h-[70%] border rounded-xl border-gray-800 p-4">
                 <p>Earning</p>
                 <p className="text-2xl">$16.4k</p>
               </div>
-              <ChartAreaDefault />
+              <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
+                <span>
+                  <p>45%</p>
+                </span>
+                <p>Closed Orders</p>
+              </div>
+            </div>
+
+            <div className="w-full h-full flex flex-col justify-between gap-4">
+              <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
+                <span>
+                  <p>45%</p>
+                </span>
+                <p>Closed Orders</p>
+              </div>
+
+              <div className="max-sm:w-full border rounded-xl border-gray-800 flex flex-col justify-between">
+                <div className="p-4">
+                  <p>Earning</p>
+                  <p className="text-2xl">$16.4k</p>
+                </div>
+                <ChartAreaDefault />
+              </div>
             </div>
           </div>
         </div>
+
       </div>
 
       {/* Table Section */}
