@@ -1,5 +1,7 @@
 'use client';
 
+// play = card temp =chart
+
 import {
   BarChart,
   Bar,
@@ -7,7 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer
 } from 'recharts';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/card';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/play';
 import Image from 'next/image';
 import dots from '@/assets/dots.svg';
 import RadioGroup from './Radiogroup';
