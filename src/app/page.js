@@ -76,8 +76,8 @@ export default function Home() {
                 <p>Closed Orders </p>
               </div>
 
-              <div className="h-[70%] border rounded-xl border-gray-800 p-4 flex flex-col justify-between">
-               <div>
+              <div className="h-[70%] border rounded-xl border-gray-800 flex flex-col justify-between">
+               <div className="p-4">
                   <p>Earning</p>
                   <p className="text-2xl">$16.4k</p>
                </div>

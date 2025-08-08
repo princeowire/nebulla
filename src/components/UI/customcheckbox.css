@@ -1,0 +1,22 @@
+.custom-checkbox {
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 1.5px solid #9ca3af; /* gray-400 */
+  border-radius: 4px;
+  background-color: transparent;
+  position: relative;
+  cursor: pointer;
+}
+
+.custom-checkbox:checked::after {
+  content: "";
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  width: 5px;
+  height: 10px;
+  border: solid #9ca3af; /* gray-400 */
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}

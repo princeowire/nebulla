@@ -1,6 +1,7 @@
 "use client"
 
 import React from "react"
+import { MoreVertical } from "lucide-react"
 import { Search, EllipsisVertical } from "lucide-react"
 import {
   ColumnFiltersState,
@@ -109,13 +110,13 @@ export function DataTable({ data }) {
             <DropdownMenuTrigger asChild>
               <Button variant="ghost" className="h-8 w-8 p-0">
                 <span className="sr-only">Open menu</span>
-                <MoreHorizontal className="h-4 w-4" />
+                <MoreVertical className="h-4 w-4 text-muted-foreground" />
               </Button>
             </DropdownMenuTrigger>
             <DropdownMenuContent align="end">
               <DropdownMenuLabel>Actions</DropdownMenuLabel>
               <DropdownMenuItem
-                onClick={() => navigator.clipboard.writeText(payment.id)}
+                onClick={() => navigator.clipboard.writeText(payment?.id)}
               >
                 Copy payment ID
               </DropdownMenuItem>
@@ -173,9 +174,9 @@ export function DataTable({ data }) {
                     {header.isPlaceholder
                       ? null
                       : flexRender(
-                          header.column.columnDef.header,
-                          header.getContext()
-                        )}
+                        header.column.columnDef.header,
+                        header.getContext()
+                      )}
                   </TableHead>
                 ))}
               </TableRow>

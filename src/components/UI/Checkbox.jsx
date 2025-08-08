@@ -1,4 +1,5 @@
 import React from "react"
+import "./customcheckbox.css"
 
 export const Checkbox = React.forwardRef(
   ({ checked, onCheckedChange, ...props }, ref) => {
@@ -6,7 +7,7 @@ export const Checkbox = React.forwardRef(
       <input
         type="checkbox"
         ref={ref}
-        className="h-4 w-4 rounded border-gray-300 text-indigo-600 focus:ring-indigo-500"
+        className="custom-checkbox"
         checked={checked}
         onChange={(e) => onCheckedChange?.(e.target.checked)}
         {...props}
