@@ -3,12 +3,12 @@
 import { Search, Bell, Settings, User } from 'lucide-react';
 import Hamburger from './Hambuger';
 
-export default function Header() {
+export default function Header({ onToggleSidebar }) {
   return (
     <header className="backdrop-blur-3xl border-b border-gray-800 px-6 py-4 z-50 flex items-center justify-between">
       <div className="flex items-center justify-between w-full">
-        <div className="flex items-center space-x-4 onClick={onToggleSidebar}">
-          <Hamburger  />
+        <div className="flex items-center space-x-4"  onClick={onToggleSidebar}>
+          <Hamburger />
         </div>
 
         <div className="flex items-center space-x-4">

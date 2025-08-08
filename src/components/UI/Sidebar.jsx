@@ -4,10 +4,10 @@ import { useState } from "react";
 import {
   ChevronLeft,
   ChevronRight,
-  Settings,
-  Bell,
-  HelpCircle,
-  Search,
+  Gift,
+  Grid2x2,
+  SquareMenu,
+  House,
   User,
 } from "lucide-react";
 
@@ -42,13 +42,26 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
        
         <div className="flex flex-col items-center gap-6 mt-6 text-gray-400"> 
 
-          <div>p</div>
+          <div className="text-3xl mb-4">L</div>
 
           <div className="flex flex-col gap-4">
-            <Search className="w-5 h-5 cursor-pointer hover:text-white" />
-            <Bell className="w-5 h-5 cursor-pointer hover:text-white" />
-            <HelpCircle className="w-5 h-5 cursor-pointer hover:text-white" />
-            <Settings className="w-5 h-5 cursor-pointer hover:text-white" />
+
+            <div className="cursor-pointer hover:text-white p-4 bg-[#001f5d88] rounded-2xl">
+              <House className="w-5 h-5 "/>
+            </div>
+
+             <div className="cursor-pointer hover:text-white p-4 rounded-2xl">
+              <Gift className="w-5 h-5 " />
+            </div> 
+
+            <div className="cursor-pointer hover:text-white p-4 rounded-2xl">
+              <Grid2x2 className="w-5 h-5 "  />
+            </div> 
+
+            <div className="cursor-pointer hover:text-white p-4 rounded-2xl">
+              <SquareMenu className="w-5 h-5 " />
+            </div> 
+
           </div>
         </div>
 
