@@ -34,7 +34,7 @@ export default function Home() {
       <Header onToggleSidebar={toggleSidebar} />
       <Sidebar collapsed={!isSidebarOpen} toggleCollapsed={toggleSidebar} />
 
-      <div className="flex flex-wrap max-sm:flex-col-reverse">
+      <div className="flex flex-wrap max-sm:flex-col-reverse w-full">
 
         {/* Top Cards */}
         <div className="flex flex-wrap gap-4 p-4">
