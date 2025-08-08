@@ -36,7 +36,7 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
   ];
 
   return (
-    <div className="flex h-screen absolute top-0 left-0 z-50">
+    <div className="flex h-screen fixed top-0 left-0 z-50">
       {/* Fixed Vertical Icon Bar */}
       <div className="w-16 bg-[#0e0f11] flex flex-col items-center justify-between h-full py-4 border-r border-gray-800">
        

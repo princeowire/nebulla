@@ -7,6 +7,9 @@ import customer from "@/assets/customer.svg";
 import { ArrowUp } from "lucide-react";
 import { useState } from "react";
 import ChartAreaDefault from "@/components/UI/Graph";
+import { DataTable } from "@/components/UI/Dattable";
+import { sampleData } from "@/components/Datas/sample-data";
+import { columns } from "@/components/Datas/columns";
 
 export default function Home() {
 
@@ -89,7 +92,9 @@ export default function Home() {
 
         </div>
 
-        <div></div>
+        <div className="p-4">
+          <DataTable columns={columns} data={sampleData} />
+        </div>
 
     </div>
   );
