@@ -9,7 +9,7 @@ import {
   Tooltip,
   ResponsiveContainer
 } from 'recharts';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/play';
+import { Card, CardContent, CardHeader, CardTitle } from '@/components/UI/Card';
 import Image from 'next/image';
 import dots from '@/assets/dots.svg';
 import RadioGroup from './Radiogroup';
