@@ -5,60 +5,59 @@ import Hamburger from './Hambuger';
 
 export default function Header({ onToggleSidebar }) {
   return (
-    <header className="backdrop-blur-3xl border-b border-gray-800 px-6 py-4 z-50 flex items-center justify-between">
-      <div className="flex items-center justify-between w-full">
-        <div className="flex items-center space-x-4"  onClick={onToggleSidebar}>
-          <Hamburger />
+    <header className="backdrop-blur-3xl border-b border-gray-800 px-4 py-3 sm:px-6 sm:py-4 z-50 flex flex-wrap items-center justify-between gap-4 sm:gap-0">
+      <div className="flex items-center space-x-4" onClick={onToggleSidebar}>
+        <Hamburger />
+      </div>
+
+      {/* RIGHT SIDE CONTENT */}
+      <div className="flex flex-wrap max-sm:w-full sm:items-center sm:space-x-4 justify-end sm:justify-end gap-4 sm:gap-4">
+
+        {/* Search Input */}
+        <div className="relative max-sm:w-full sm:w-auto flex-1 sm:flex-none">
+          <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
+          <input
+            type="text"
+            placeholder="Search here..."
+            className="border border-gray-800 rounded-[30px] pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-full sm:w-64"
+          />
+          <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-600 px-1.5 py-0.5 rounded">
+            /
+          </span>
         </div>
 
-        <div className="flex items-center space-x-4">
-          {/* Search */}
-          <div className="relative">
-            <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
-            <input
-              type="text"
-              placeholder="Search here..."
-              className="border border-gray-800 rounded-[30px] pl-10 pr-4 py-2 text-sm text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent w-64"
+        {/* Notification Icon */}
+        <button className="relative p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+          <Bell className="h-5 w-5" />
+          <span className="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full"></span>
+        </button>
+
+        {/* Settings Icon */}
+        <button className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            fill="none"
+            viewBox="0 0 24 24"
+            className="size-6"
+          >
+            <path
+              fill="currentColor"
+              d="M15 2H9C7.34 2 6 3.34 6 5v14c0 1.66 1.34 3 3 3h6c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3Z"
+              opacity="0.4"
             />
-            <span className="absolute right-3 top-1/2 transform -translate-y-1/2 text-xs text-gray-400 bg-gray-600 px-1.5 py-0.5 rounded">
-              /
-            </span>
-          </div>
+            <path
+              fill="currentColor"
+              d="M18.67 5.33h-.34c-.12 0-.23 0-.35.01.01.05.02.1.02.16v13c0 .06-.01.11-.02.16.11.01.22.01.35.01h.34c2.66 0 3.33-.67 3.33-3.34V8.67c0-2.67-.67-3.34-3.33-3.34ZM6 18.5v-13c0-.06.01-.11.02-.16-.12-.01-.23-.01-.35-.01h-.34C2.67 5.33 2 6 2 8.67v6.66c0 2.67.67 3.34 3.33 3.34h.34c.12 0 .23 0 .35-.01A.777.777 0 0 1 6 18.5Z"
+            />
+          </svg>
+        </button>
 
-          {/* Notifications */}
-          <button className="relative p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
-            <Bell className="h-5 w-5" />
-            <span className="absolute top-0 right-0 h-2 w-2 bg-red-500 rounded-full"></span>
-          </button>
-
-          {/* Settings */}
-          <button className="p-2 text-gray-400 hover:text-white hover:bg-gray-700 rounded-lg transition-colors">
-            {/* <Settings className="h-5 w-5" /> */}
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="24"
-                height="24"
-                fill="none"
-                viewBox="0 0 24 24"
-                className="size-6"
-              >
-                <path
-                  fill="currentColor"
-                  d="M15 2H9C7.34 2 6 3.34 6 5v14c0 1.66 1.34 3 3 3h6c1.66 0 3-1.34 3-3V5c0-1.66-1.34-3-3-3Z"
-                  opacity="0.4"
-                />
-                <path
-                  fill="currentColor"
-                  d="M18.67 5.33h-.34c-.12 0-.23 0-.35.01.01.05.02.1.02.16v13c0 .06-.01.11-.02.16.11.01.22.01.35.01h.34c2.66 0 3.33-.67 3.33-3.34V8.67c0-2.67-.67-3.34-3.33-3.34ZM6 18.5v-13c0-.06.01-.11.02-.16-.12-.01-.23-.01-.35-.01h-.34C2.67 5.33 2 6 2 8.67v6.66c0 2.67.67 3.34 3.33 3.34h.34c.12 0 .23 0 .35-.01A.777.777 0 0 1 6 18.5Z"
-                />
-              </svg>
-          </button>
-
-          {/* Profile */}
-          <div className="flex items-center space-x-2">
-            <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
-              <User className="h-4 w-4 text-white" />
-            </div>
+        {/* User Avatar */}
+        <div className="flex items-center space-x-2">
+          <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
+            <User className="h-4 w-4 text-white" />
           </div>
         </div>
       </div>
