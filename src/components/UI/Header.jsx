@@ -1,7 +1,7 @@
 "use client";
 
 import { Search, Bell, Settings, User } from 'lucide-react';
-import Hamburger from './Hambuger';
+import Hamburger from './sleep';
 
 export default function Header({ onToggleSidebar }) {
   return (

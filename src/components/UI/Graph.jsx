@@ -14,7 +14,7 @@ import {
   ChartContainer,
   ChartTooltip,
   ChartTooltipContent,
-} from "@/components/UI/temp"
+} from "@/components/UI/Chart"
 
 const chartData = [
   { month: "January", desktop: 186 },
