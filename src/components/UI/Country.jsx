@@ -19,7 +19,7 @@ export default function CountrySource() {
       <p className="text-md text-[#9CA3AF] mt-1 font-semibold">Country in this month</p>
 
       {/* Country Row */}
-      <div className="flex items-center justify-between bg-[#111315] rounded-md py-3 px-3 mt-4">
+      <div className="flex items-center justify-between flex-wrap gap-2 bg-[#111315] rounded-md py-3 px-3 mt-4">
         {/* Flag + Name */}
         <div className="flex items-center gap-2">
           <img
@@ -31,7 +31,7 @@ export default function CountrySource() {
         </div>
 
         {/* Stats */}
-        <div className="flex items-center gap-3">
+        <div className="flex items-center flex-wrap gap-3">
           <div className="flex items-center gap-1 bg-[#132E1B] px-6 py-[4px] rounded-full">
             {/* Green Arrow Up */}
             <FiEye className="text-[#22C55E]" />

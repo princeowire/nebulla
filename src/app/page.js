@@ -37,7 +37,7 @@ export default function Home() {
       <div className="flex flex-wrap max-sm:flex-col-reverse">
 
         {/* Top Cards */}
-        <div className="flex flex-wrap gap-4 p-4">
+        <div className="flex flex-wrap justify-between gap-4 p-4 w-full">
           {data.map((item) => (
             <div key={item.id} className="flex justify-between flex-1 min-w-[250px] max-sm:w-full gap-4 p-4 border border-gray-800 rounded-[20px]">
               <div className="flex flex-col justify-center gap-1">
@@ -53,34 +53,37 @@ export default function Home() {
         </div>
 
         {/* Charts Section */}
-        <div className="flex flex-wrap gap-4 justify-between p-4">
-          <div className="w-full sm:w-[60%]">
+        <div className="flex flex-wrap gap-4 justify-between p-4 w-full max-[900px]:flex-col">
+          <div className="w-[60%] max-[900px]:w-full">
             <BarChartMultiple />
           </div>
 
-          <div className="w-full sm:w-[37%] flex flex-col sm:flex-row gap-4">
-            <div className="w-full h-full flex flex-col justify-between gap-4">
-              <div className="h-[200px] sm:h-[70%] border rounded-xl border-gray-800 p-4">
+          <div className="w-[37%] max-[900px]:w-full flex gap-4 max-md:flex-wrap">
+
+            <div className="max-md:w-[48%] max-sm:w-full w-full h-full flex flex-col justify-between gap-4">
+
+              <div className="h-[70%] sm:h-[70%] border rounded-xl border-gray-800 p-4">
                 <p>Earning</p>
                 <p className="text-2xl">$16.4k</p>
               </div>
-              <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
+              <div className="h-[28%] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
                 <span>
                   <p>45%</p>
                 </span>
                 <p>Closed Orders</p>
               </div>
+
             </div>
 
-            <div className="w-full h-full flex flex-col justify-between gap-4">
-              <div className="h-[80px] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
+            <div className="max-md:w-[48%] max-sm:w-full max w-full h-full flex flex-col justify-between gap-4">
+              <div className="h-[28%] sm:h-[25%] flex gap-4 items-center justify-center border rounded-xl border-gray-800 p-4">
                 <span>
-                  <p>45%</p>
+                  <p>85%</p>
                 </span>
                 <p>Closed Orders</p>
               </div>
 
-              <div className="max-md:w-full border rounded-xl border-gray-800 flex flex-col justify-between">
+              <div className="max-md:w-full h-[70%] border rounded-xl border-gray-800 flex flex-col justify-between">
                 <div className="p-4">
                   <p>Earning</p>
                   <p className="text-2xl">$16.4k</p>
@@ -99,7 +102,7 @@ export default function Home() {
       </div>
 
       {/* Bottom Widgets */}
-      <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 p-4">
+      <div className="grid max-[900px]:grid-cols-1 grid-cols-3 gap-4 p-4">
         <TeamActivity />
         <div className="grid grid-cols-1 gap-4">
           <SocialSource />

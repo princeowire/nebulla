@@ -9,6 +9,7 @@ import {
   SquareMenu,
   House,
   User,
+  LucideSettings,
 } from "lucide-react";
 
 export default function Sidebar({ collapsed, toggleCollapsed }) {
@@ -67,9 +68,13 @@ export default function Sidebar({ collapsed, toggleCollapsed }) {
 
         {/* Spacer */}
 
-        <div>
+        <div className="flex flex-col gap-8 items-center justify-center ">
             <div className="w-8 h-8 rounded-full bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center">
               <User className="h-4 w-4 text-white" />
+            </div>
+
+            <div className="cursor-pointer text-gray-400  hover:text-white p-4 rounded-2xl">
+              <LucideSettings />
             </div>
         </div>
         <div />
