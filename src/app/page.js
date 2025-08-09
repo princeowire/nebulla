@@ -16,7 +16,7 @@ import Transactions from "@/components/UI/Transaction";
 import CountrySource from "@/components/UI/Country";
 
 export default function Home() {
-  const [isSidebarOpen, setSidebarOpen] = useState(true);
+  const [isSidebarOpen, setSidebarOpen] = useState(false);
 
   const data = [
     { id: 1, name: "Sales", value: "6.5k", percentage: "4.3%", img: customer, color: "#ffba42", textColor: "text-[#ffba42]" },
@@ -34,7 +34,7 @@ export default function Home() {
       <Header onToggleSidebar={toggleSidebar} />
       <Sidebar collapsed={!isSidebarOpen} toggleCollapsed={toggleSidebar} />
 
-      <div className="flex flex-wrap max-sm:flex-col-reverse">
+      <div className="flex flex-wrap max-sm:flex-col-reverse w-full">
 
         {/* Top Cards */}
         <div className="flex flex-wrap justify-between gap-4 p-4 w-full">
