@@ -18,7 +18,7 @@ import SocialSource from "@/components/UI/social";
 import Transactions from "@/components/UI/Transaction";
 import CountrySource from "@/components/UI/Country";
 import CircularProgress from "@/components/UI/Circularprogress";
-import DivisionBarChart from "@/components/UI/Divisionbar";
+// import DivisionBarChart from "@/components/UI/Divisionbar";
 
 export default function Home() {
   const [isSidebarOpen, setSidebarOpen] = useState(false);
@@ -108,7 +108,7 @@ export default function Home() {
         </div>
 
         <div className="p-4">
-          <DivisionBarChart />
+          {/* <DivisionBarChart /> */}
         </div>
       </div>
 
